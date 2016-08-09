@@ -26,7 +26,7 @@ if __name__ == "__main__":
 
     for x in str:
         if x == '|':
-            print("pack[", num, "] = ",sep="",end="")
+            print("pack[", num, "] ",(digits(number_of_bytes)-digits(num+1))*" ","= ",sep="",end="")
             num +=1
             hex_start = True
         else:
@@ -34,7 +34,7 @@ if __name__ == "__main__":
                 print("0x",x,sep="",end="")
                 hex_start = False
             else:
-                print(x,(digits(number_of_bytes)-digits(num))*" ",";",sep="",end=" ")
+                print(x,";",sep="",end=" ")
                 hex_start = True
 
             if not (num) % 8 and hex_start:
