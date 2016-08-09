@@ -26,11 +26,11 @@ if __name__ == "__main__":
 
     number_of_bytes = packet_bytes(str);
 
-    print(number_of_bytes);
+    print("C/C++ output:");
 
     for x in str:
         if x == '|':
-            print("pack3[", num, "] = ",sep="",end="")
+            print("pack[", num, "] = ",sep="",end="")
             num +=1
             hex_start = True
         else:
@@ -43,4 +43,4 @@ if __name__ == "__main__":
 
             if not (num) % 8 and hex_start:
                 print("")
-
+    print()
