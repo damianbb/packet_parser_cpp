@@ -1,18 +1,17 @@
 # Packet parser for C++ applications
 
-Python scritp that convert e.g wireshark output of packets to C/C++ code that put this packets to table in hex format.
+Python scritp that convert e.g. wireshark output to C/C++ code that put packets to table in hex format.
 
 ## Usage
 
 ```bash
-$ python3 cpp_packet_parser.py
+$ python3 packet_parser_cpp.py
 ```
-
 ## Example
 
 ```txt
-$ python3 cpp_packet_parser.py 
-Paste packet in hex format (e.g. from wireshark)  "|3d|f5|23|fg|" :
+$ python3 packet_parser_cpp.py 
+Paste packet in hex format (e.g. from wireshark)  "|3d|f5|23|fg" :
 |00|ff|17|af|08|a4|fc|00|00|00|00|00|86|dd|60|00|00|00|00|28|3a|ff|fc|42|c6|b0|a9|06|85|96|4f|47|11|12|ec|ff|f9|55|fc|9d|e6|d3|bd|5b|2b|c4|13|74|0d|1a|ce|bc|22|4d|88|00|28|9d|e0|00|00|00|fc|42|c6|b0|a9|06|85|96|4f|47|11|12|ec|ff|f9|55|02|01|fc|00|00|00|00|00|01|01|00|ff|17|af|08|a4
 C/C++ output:
 pack[0] = 0x00 ; pack[1] = 0xff ; pack[2] = 0x17 ; pack[3] = 0xaf ; pack[4] = 0x08 ; pack[5] = 0xa4 ; pack[6] = 0xfc ; pack[7] = 0x00 ; 
